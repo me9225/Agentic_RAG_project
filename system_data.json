@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-03-14T23:19:14.774656",
+  "items": {
+    "decisions": [
+      {
+        "id": "dec-01",
+        "title": "מסך הדשבורד",
+        "summary": "יציג את המטבעות הנוכחיים ואת המשימות הפעילות.",
+        "tags": [
+          "מסך ראשי",
+          "מטבעות",
+          "משימות"
+        ],
+        "source": {
+          "tool": "claude_code",
+          "file": "./family_quest_project.claude/frontend_plan.md"
+        }
+      },
+      {
+        "id": "dec-02",
+        "title": "מסך חנות הפרסים",
+        "summary": "יציג רשת של פרסים זמינים לרכישה.",
+        "tags": [
+          "חנות",
+          "פרסים",
+          "רכישה"
+        ],
+        "source": {
+          "tool": "claude_code",
+          "file": "./family_quest_project.claude/frontend_plan.md"
+        }
+      },
+      {
+        "id": "dec-01",
+        "title": "בחירת צבעים",
+        "summary": "הצבע הראשי שנבחר לעיצוב המערכת הוא סגול בהיר (Hex: #B39DDB), וצבע משני ירוק מנטה (#A5D6A7) עבור פעולות הצלחה.",
+        "tags": [
+          "עיצוב חזותי",
+          "צבעים"
+        ],
+        "source": {
+          "tool": "claude_code",
+          "file": "./family_quest_project.claude/ui_spec.md"
+        }
+      },
+      {
+        "id": "dec-02",
+        "title": "תרגום ופורמט RTL",
+        "summary": "הממשק יתורגם לעברית (he-IL) בשלב הראשון, ולאנגלית (en-US) וערבית (ar) בשחרור Q3 הקרוב.",
+        "tags": [
+          "תרגום",
+          "RTL"
+        ],
+        "source": {
+          "tool": "claude_code",
+          "file": "./family_quest_project.claude/ui_spec.md"
+        }
+      },
+      {
+        "id": "dec-01",
+        "title": "יישום JWT",
+        "summary": "יישום מערכת זיהוי JWT (JSON Web Token) עבור אימות משתמשים.",
+        "tags": [
+          "אימות",
+          "ביטחון"
+        ],
+        "source": {
+          "tool": "copilot",
+          "file": "./family_quest_project.copilot/tasks.md"
+        }
+      },
+      {
+        "id": "dec-02",
+        "title": "יצירת נקודת קצה API",
+        "summary": "יצירת נקודת קצה API חדשה להשלמת משימות.",
+        "tags": [
+          "API",
+          "משימות"
+        ],
+        "source": {
+          "tool": "copilot",
+          "file": "./family_quest_project.copilot/tasks.md"
+        }
+      },
+      {
+        "id": "dec-01",
+        "title": "עדכוני סכימה",
+        "summary": "עדכון מבנה מסד הנתונים כדי לכלול שדות חדשים ולהסיר שדות ישנים.",
+        "tags": [
+          "עדכוני מסד נתונים",
+          "פרטיות",
+          "חוויית משתמש"
+        ],
+        "source": {
+          "tool": "cursor",
+          "file": "./family_quest_project.cursor/changelog.md"
+        }
+      },
+      {
+        "id": "dec-01",
+        "title": "Database Selection",
+        "summary": "Use SQLite for the local family-management app due to its lightweight nature and zero setup requirements.",
+        "tags": [
+          "database",
+          "sqlite",
+          "local"
+        ],
+        "source": {
+          "tool": "cursor",
+          "file": "./family_quest_project.cursor/decisions.md"
+        }
+      },
+      {
+        "id": "dec-02",
+        "title": "Task Management",
+        "summary": "Parents assign tasks to specific children.",
+        "tags": [
+          "task management",
+          "parent-child"
+        ],
+        "source": {
+          "tool": "cursor",
+          "file": "./family_quest_project.cursor/decisions.md"
+        }
+      },
+      {
+        "id": "dec-01",
+        "title": "שימור הנתונים",
+        "summary": "אין למחוק באופן קבוע משימות או עסקאות מהבסיס נתונים. יש להשתמש בשדה בוליאני 'is_active' ולהגדיר אותו כ-'False' במקום למחוק.",
+        "tags": [
+          "נתונים",
+          "מחיקה רכה",
+          "שמירת היסטוריה"
+        ],
+        "source": {
+          "tool": "cursor",
+          "file": "./family_quest_project.cursor/rules.md"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "id": "rule-01",
+        "rule": "יש ליישם ספין-ליידר (Loading Spinner) בזמן קריאות API כדי למנוע לחיצות כפולות על כפתור הרכישה.",
+        "scope": "מסך חנות הפרסים",
+        "source": {
+          "tool": "claude_code",
+          "file": "./family_quest_project.claude/frontend_plan.md"
+        }
+      },
+      {
+        "id": "rule-01",
+        "rule": "כל המסכים בממשק חייבים להיות בפורמט RTL (ימין לשמאל).",
+        "scope": "עיצוב הממשק",
+        "source": {
+          "tool": "claude_code",
+          "file": "./family_quest_project.claude/ui_spec.md"
+        }
+      },
+      {
+        "id": "rule-02",
+        "rule": "שימוש במינימום טקסט ואייקונים גדולים עבור ילדים.",
+        "scope": "עיצוב הממשק",
+        "source": {
+          "tool": "claude_code",
+          "file": "./family_quest_project.claude/ui_spec.md"
+        }
+      },
+      {
+        "id": "rule-03",
+        "rule": "הודעות שגיאה חייבות להיות מנוסחות בטון ידידותי.",
+        "scope": "הודעות שגיאה",
+        "source": {
+          "tool": "claude_code",
+          "file": "./family_quest_project.claude/ui_spec.md"
+        }
+      },
+      {
+        "id": "rule-01",
+        "rule": "יש ליישם הגבלת קצב (rate limiting) עבור נקודות קצה רגישות כדי למנוע התקפות ברוט פורס.",
+        "scope": "בטחון",
+        "source": {
+          "tool": "copilot",
+          "file": "./family_quest_project.copilot/tasks.md"
+        }
+      },
+      {
+        "id": "rule-01",
+        "rule": "Any change to the `redeem_reward` function must use strict database transactions and verify the user's coin balance inside the lock.",
+        "scope": "Function Modification",
+        "source": {
+          "tool": "copilot",
+          "file": "./family_quest_project.copilot/warnings.md"
+        }
+      },
+      {
+        "id": "rule-01",
+        "rule": "הוסף שדה מחרוזת `reward_icon` לטבלת `rewards` עבור תמיכה חזותית בממשק המשתמש.",
+        "scope": "טבלת `rewards`",
+        "source": {
+          "tool": "cursor",
+          "file": "./family_quest_project.cursor/changelog.md"
+        }
+      },
+      {
+        "id": "rule-02",
+        "rule": "הוסף שדה בוליאני `is_locked` לטבלת `users` כדי למנוע מחשבונות מושבתים להתחבר.",
+        "scope": "טבלת `users`",
+        "source": {
+          "tool": "cursor",
+          "file": "./family_quest_project.cursor/changelog.md"
+        }
+      },
+      {
+        "id": "rule-01",
+        "rule": "כל טבלה חייבת לכלול את השדות 'created_at' ו-'updated_at' בפורמט UTC.",
+        "scope": "כל הטבלאות בבסיס הנתונים",
+        "source": {
+          "tool": "cursor",
+          "file": "./family_quest_project.cursor/rules.md"
+        }
+      }
+    ],
+    "warnings": [
+      {
+        "id": "warn-01",
+        "area": "קריאות API",
+        "message": "יש לוודא כי ספין-ליידר מוצג בזמן קריאות API כדי למנוע בעיות של לחיצות כפולות.",
+        "severity": "גבוה",
+        "source": {
+          "tool": "claude_code",
+          "file": "./family_quest_project.claude/frontend_plan.md"
+        }
+      },
+      {
+        "id": "warn-01",
+        "area": "בדיקות",
+        "message": "כתיבת בדיקות יחידה חשובה להבטחת תקינות הלוגיקה של ניכוי המטבעות.",
+        "severity": "גבוה",
+        "source": {
+          "tool": "copilot",
+          "file": "./family_quest_project.copilot/tasks.md"
+        }
+      },
+      {
+        "id": "warn-01",
+        "area": "Function Sensitivity",
+        "message": "The `redeem_reward` function is highly sensitive and problematic, with a risk of race conditions.",
+        "severity": "CRITICAL",
+        "source": {
+          "tool": "copilot",
+          "file": "./family_quest_project.copilot/warnings.md"
+        }
+      },
+      {
+        "id": "warn-02",
+        "area": "Authentication",
+        "message": "Do not modify the JWT authentication hook without running the full security test suite.",
+        "severity": "HIGH",
+        "source": {
+          "tool": "copilot",
+          "file": "./family_quest_project.copilot/warnings.md"
+        }
+      },
+      {
+        "id": "warn-03",
+        "area": "Database Limitations",
+        "message": "SQLite locks the entire database on writes, requiring brief write transactions.",
+        "severity": "MEDIUM",
+        "source": {
+          "tool": "copilot",
+          "file": "./family_quest_project.copilot/warnings.md"
+        }
+      },
+      {
+        "id": "warn-01",
+        "area": "פרטיות",
+        "message": "שדה `child_age` הוסר מטבלת `users` עקב שיקולי פרטיות. תאריך הלידה לא יישמר יותר.",
+        "severity": "גבוה",
+        "source": {
+          "tool": "cursor",
+          "file": "./family_quest_project.cursor/changelog.md"
+        }
+      },
+      {
+        "id": "warn-01",
+        "area": "Database",
+        "message": "SQLite has limitations with concurrent writes, requiring careful management of database locks during coin transactions.",
+        "severity": "medium",
+        "source": {
+          "tool": "cursor",
+          "file": "./family_quest_project.cursor/decisions.md"
+        }
+      }
+    ]
+  }
+}
